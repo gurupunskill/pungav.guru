@@ -27,29 +27,35 @@
 }
 
 .navigation-bar--link {
-    margin-left: rem(16px);
+    margin-left: 16px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
     font-size: rem(18px);
     line-height: rem(28px);
-    letter-spacing: rem(0.435px);
+    letter-spacing: rem(0.2px);
     color: #000000;
     text-decoration: none;
 }
 
+    .navigation-bar--link:hover {
+        border-bottom: rem(1px) solid #000000;
+    }
+
 .navigation-bar--link--selected {
-    margin-left: rem(16px);
     font-family: Roboto;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: rem(18px);
     line-height: rem(28px);
     letter-spacing: rem(0.2px);
     color: #000000;
-    // text-decoration: underline;
-    border-bottom: 2px solid black;
+    border-bottom: rem(2px) solid #000000;
 }
+
+    .navigation-bar--link--selected:hover {
+        border-bottom: rem(2px) solid #000000 !important;
+    }
 
 .app-title {
     font-family: Roboto;
@@ -58,4 +64,11 @@
     font-size: rem(24px);
     line-height: rem(28px);
     letter-spacing: rem(0.4px);
+}
+
+.app-title:hover span {display:none}
+.app-title:hover:before {
+    content: "pungav.guru";
+    cursor: pointer;
+    border-bottom: rem(2px) solid #000000;
 }
