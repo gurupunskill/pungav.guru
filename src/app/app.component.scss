@@ -1,74 +1,74 @@
-@import "typography";
+@import "theme";
 
 .page {
-    width: 100%;
-    max-width: rem(1024px);
-    margin: auto;
+  width: 100%;
+  max-width: rem(1024px);
+  margin: auto;
 }
 
 .page--content {
-    margin-top: rem(72px);
+  margin-top: rem(72px);
 }
 
 .navigation-bar {
-    display: flex;
-    flex-direction: column;
-    height: rem(160px);
+  display: flex;
+  flex-direction: column;
+  height: rem(160px);
 }
 
 .navigation-bar--content {
-    // position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: rem(64px);
-    margin-right: rem(64px);
-    margin-top: auto;
+  // position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: rem(64px);
+  margin-right: rem(64px);
+  margin-top: auto;
 }
 
 .navigation-bar--link {
-    margin-left: 16px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: rem(18px);
-    line-height: rem(28px);
-    letter-spacing: rem(0.2px);
-    color: #000000;
-    text-decoration: none;
+  margin-left: 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: rem(18px);
+  line-height: rem(28px);
+  letter-spacing: rem(0.2px);
+  color: #000000;
+  text-decoration: none;
 }
 
     .navigation-bar--link:hover {
-        border-bottom: rem(1px) solid #000000;
+      border-bottom: rem(1px) solid #000000;
     }
 
 .navigation-bar--link--selected {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: rem(18px);
-    line-height: rem(28px);
-    letter-spacing: rem(0.2px);
-    color: #000000;
-    border-bottom: rem(2px) solid #000000;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: rem(18px);
+  line-height: rem(28px);
+  letter-spacing: rem(0.2px);
+  color: #000000;
+  border-bottom: rem(2px) solid #000000;
 }
 
     .navigation-bar--link--selected:hover {
-        border-bottom: rem(2px) solid #000000 !important;
+      border-bottom: rem(2px) solid #000000 !important;
     }
 
 .app-title {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: rem(24px);
-    line-height: rem(28px);
-    letter-spacing: rem(0.4px);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: rem(24px);
+  line-height: rem(28px);
+  letter-spacing: rem(0.4px);
 }
 
 .app-title:hover span {display:none}
 .app-title:hover:before {
-    content: "pungav.guru";
-    cursor: pointer;
-    border-bottom: rem(2px) solid #000000;
+  content: "pungav.guru";
+  cursor: pointer;
+  border-bottom: rem(2px) solid #000000;
 }

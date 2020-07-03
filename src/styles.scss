@@ -1,28 +1,28 @@
-@import "typography";
+@import "theme";
 
 html, body {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 div:focus {
-    outline: none;
+  outline: none;
 }
 
 // Scrollbar
 ::-webkit-scrollbar {
-    width: rem(8px);
+  width: rem(8px);
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: rem(4px);
+  background: #888;
+  border-radius: rem(4px);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
