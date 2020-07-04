@@ -2,5 +2,31 @@
 @import "~fontsource-roboto/index.css";
 
 h1, h2, h3, h4, h5, h6, a, p, span {
-    margin: 0;
+  margin: 0;
+}
+
+strong {
+  font-weight: 400;
+}
+
+a:-webkit-any-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.light {
+  font-weight: 300 !important;
+}
+
+.regular {
+  font-weight: 400 !important;
+}
+
+.medium {
+  font-weight: 500 !important;
+}
+
+.bold {
+  font-weight: 700 !important;
 }
