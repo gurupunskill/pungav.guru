@@ -1,0 +1,8 @@
+<div *ngIf="blogIndex" class="full-width-content">
+  <div class="post-listing" *ngFor="let post of blogIndex.posts; let i = index" (click)="gotoPost(post.file_name)" [ngStyle]="{'background-image':'url(' + coverImagePaths[i] + ')'}">
+    <div class="text-content--heading no-bottom-margin">  
+      <h3 class="mdc-typography--headline2 light">{{post.title}}</h3>
+    </div>
+    <a class="mdc-typography--headline6 light">{{parsedDates[i]}}</a>
+  </div>
+</div>

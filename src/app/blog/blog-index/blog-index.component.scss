@@ -1,0 +1,22 @@
+@import "theme";
+
+.post-listing {
+  display: flex;
+  height: rem(576px);
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+  color: white;
+  margin-bottom: rem(32px);
+  // border-radius: rem(8px);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.post-listing:hover {
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+  padding: rem(16px);
+}
