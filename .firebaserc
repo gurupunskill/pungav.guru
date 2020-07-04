@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pungav-guru": {
+      "hosting": {
+        "pungav-guru": [
+          "pungav-guru"
+        ]
+      }
+    }
+  }
+}
