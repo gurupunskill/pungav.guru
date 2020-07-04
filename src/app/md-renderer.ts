@@ -112,6 +112,7 @@ const paragraph = (text: string) => {
     return `
     <div class='full-width-content'>
       ${text}
+      <div class='small-spacer'></div>
     </div>`
   }
 

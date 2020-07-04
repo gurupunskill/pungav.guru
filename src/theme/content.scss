@@ -34,7 +34,7 @@
 img {
   // width: 100%;
   max-width: 100%;
-  margin: rem(32px) 0 rem(32px) 0;
+  margin: rem(8px) 0 rem(8px) 0;
 }
 
 blockquote {
@@ -54,6 +54,12 @@ blockquote {
 ul, ol {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+table {
+  margin-top: rem(16px);
+  margin-bottom: rem(16px);
+  font-family: "Roboto";
 }
 
 //************************************************
