@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
 
 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
 
