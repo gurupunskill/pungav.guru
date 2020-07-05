@@ -1,7 +1,17 @@
 @import 'functions';
 
-//************************************************
 // Content containers
+
+.page {
+  width: 100%;
+  max-width: rem(1280px);
+  margin: auto;
+}
+
+.page--content {
+  margin-top: rem(72px);
+}
+
 .text-content--heading {
   margin: rem(32px) rem(64px) rem(16px) rem(64px);
 }
@@ -10,6 +20,11 @@
   margin: 0 rem(64px) rem(8px) rem(64px);
   text-align: justify;
   // font-weight: 300;
+}
+
+.blog-content {
+  max-width: rem(1024px);
+  margin: auto;
 }
 
 .standard-content {
@@ -29,22 +44,26 @@
   align-items: center;
 }
 
-//************************************************
 // Content overrides
 img {
-  // width: 100%;
   max-width: 100%;
-  margin: rem(8px) 0 rem(8px) 0;
+  margin: rem(8px);
+  transition: all 0.3s ease 0s;
+}
+
+img:hover {
+  transform: scale(1.025);
 }
 
 blockquote {
   margin: 0 rem(64px) rem(8px) rem(64px);
-  padding: rem(8px) 0 rem(8px) rem(16px);
-  background-color: #eeeeee;
-  border-left: rem(4px) solid #777777;
+  padding: rem(16px);
+  background-color: #f7f7f7;
+  border-left: rem(4px) solid #444444;
 }
   blockquote .text-content--body {
     margin: 0;
+    color: #444444;
   }
 
   blockquote blockquote {
@@ -57,12 +76,41 @@ ul, ol {
 }
 
 table {
-  margin-top: rem(16px);
-  margin-bottom: rem(16px);
-  font-family: "Roboto";
+  font-family: $mdc-typography-font-family;
+  margin: rem(16px) auto rem(16px) auto;
 }
 
-//************************************************
+a:-webkit-any-link {
+  display: inline-block;
+  position: relative;
+  color: rgb(0, 0, 206);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+  a:-webkit-any-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 206);;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out 0s;
+
+  }
+
+  a:-webkit-any-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  a:-webkit-any-link:hover {
+    color: rgb(0, 0, 206);
+  }
+
 // Spacing
 .no-bottom-margin {
   margin-bottom: 0 !important;
@@ -82,5 +130,3 @@ table {
   width: 100%;
   height: rem(64px);
 }
-
-//************************************************

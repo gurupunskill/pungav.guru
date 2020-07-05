@@ -1,22 +1,21 @@
+@use "@material/typography" with (
+  $font-family: unquote("Inter, Roboto, Helvetica, Arial, sans-serif")
+);
 @use "@material/typography/mdc-typography";
-@import "~fontsource-roboto/latin-ext-300.css";
-@import "~fontsource-roboto/latin-ext-400.css";
-@import "~fontsource-roboto/latin-ext-500.css";
-@import "~fontsource-roboto/latin-ext-700.css";
 
+// @import "~fontsource-roboto/latin-ext-300.css";
+// @import "~fontsource-roboto/latin-ext-400.css";
+// @import "~fontsource-roboto/latin-ext-500.css";
+// @import "~fontsource-roboto/latin-ext-700.css";
+@import "~fontsource-inter/latin-ext-300.css";
+@import "~fontsource-inter/latin-ext-400.css";
+@import "~fontsource-inter/latin-ext-500.css";
+@import "~fontsource-inter/latin-ext-700.css";
+
+$mdc-typography-font-family: unquote("Inter, Roboto, Helvetica, Arial, sans-serif");
 
 h1, h2, h3, h4, h5, h6, a, p, span {
   margin: 0;
-}
-
-strong {
-  font-weight: 400;
-}
-
-a:-webkit-any-link {
-  color: blue;
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .light {
