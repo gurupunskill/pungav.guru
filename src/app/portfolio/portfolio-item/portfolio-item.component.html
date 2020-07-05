@@ -1,0 +1,10 @@
+<div class="portfolio-item" [ngStyle]="style">
+  <div class="portfolio-item--header">
+    <h3 class="mdc-typography--headline2 bold">{{title}}</h3>
+    <div class="small-spacer"></div>
+    <h3 class="mdc-typography--headline4 regular">{{subtitle}}</h3>
+  </div>
+  <div class="portfolio-item--body mdc-typography--body1">
+    <markdown [src]="description_file"> </markdown>
+  </div>
+</div>

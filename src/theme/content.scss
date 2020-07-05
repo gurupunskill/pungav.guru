@@ -19,6 +19,8 @@
 
 .text-content--heading {
   margin: rem(32px) rem(64px) rem(16px) rem(64px);
+  // text-align: left;
+  // width: ;
 }
 
 .text-content--body {
@@ -28,7 +30,7 @@
 }
 
 .blog-content {
-  max-width: rem(1024px);
+  max-width: rem(1280px);
   margin: auto;
 }
 
@@ -119,6 +121,10 @@ a:-webkit-any-link {
 // Spacing
 .no-bottom-margin {
   margin-bottom: 0 !important;
+}
+
+.no-margin {
+  margin: 0 0 0 0 !important;
 }
 
 .small-spacer {

@@ -1,0 +1,1 @@
+%no-margin%As a frontend developer at SecureX, I learnt to build well designed, secure, and structured user interfaces using Angular and React. I contributed to the user interface design and implementation of their primary application as well as a completely independent secondary application.
