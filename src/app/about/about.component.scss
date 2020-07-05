@@ -1,0 +1,13 @@
+@import "theme";
+
+.social-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.social-row a {
+  margin-right: rem(8px);
+  font-weight: 500;
+}
