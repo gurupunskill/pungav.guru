@@ -121,7 +121,7 @@ const paragraph = (text: string) => {
 
   parent_classes = "text-content--body " + parent_classes;
   if(!replace_child) {
-    child_classes = `mdc-typography--body1 light ` + child_classes;
+    child_classes = `mdc-typography--body1 ` + child_classes;
   }
 
   parent_classes = parent_classes.trim();
@@ -138,7 +138,7 @@ const list = (body:string, ordered:boolean, start:number) => {
     startatt = (ordered && start !== 1) ? (' start="' + start + '"') : '';
   var out = '<' + type + startatt + '>\n' + body + '</' + type + '>\n';
   return `
-  <div class="text-content--body mdc-typography--body1 light">
+  <div class="text-content--body mdc-typography--body1">
     ${out}
   </div>`;
 }

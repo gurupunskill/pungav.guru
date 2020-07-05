@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 const routes: Routes = [
   {
