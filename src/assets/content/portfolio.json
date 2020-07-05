@@ -1,5 +1,5 @@
 {
-  "categories":["Work"],
+  "categories":["Work", "Education"],
   "Work": [
     [
       {
@@ -21,6 +21,16 @@
         "subtitle":"Software Engineer Intern",
         "description_file":"microsoft",
         "bgColor":"#317393"
+      }
+    ]
+  ],
+  "Education": [
+    [
+      {
+      "title":"National Institute of Technology Karnataka",
+      "subtitle":"B.Tech Computer Science",
+      "description_file":"nitk",
+      "bgColor":"#111111"
       }
     ]
   ]
