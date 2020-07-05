@@ -11,14 +11,17 @@ import { markedOptionsFactory } from './md-renderer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { PortfolioItemComponent } from './portfolio/portfolio-item/portfolio-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     PortfolioComponent,
+    PortfolioItemComponent,
     PageNotFoundComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    PortfolioItemComponent
   ],
   imports: [
     BrowserModule,

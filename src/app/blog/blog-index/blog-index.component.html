@@ -1,7 +1,13 @@
+<!-- <h1 class="text-content--heading mdc-typography--headline1">Blog.</h1> -->
 <div *ngIf="blogIndex" class="full-width-content">
-  <div class="post-listing" *ngFor="let post of blogIndex.posts; let i = index" (click)="gotoPost(post.file_name)" [ngStyle]="{'background-image':'url(' + coverImagePaths[i] + ')'}">
+  <div class="post-listing" 
+    *ngFor="let post of blogIndex.posts; let i = index" 
+    (click)="gotoPost(post.file_name)" 
+    [ngStyle]="postStyles[i]"
+  >
+    <!-- [ngStyle]="{'background-image':'url(' + coverImagePaths[i] + ')', 'background-color': post.cover_color}" -->
     <div class="text-content--heading">  
-      <h3 class="mdc-typography--headline2 medium">{{post.title}}</h3>
+      <h3 class="post-listing--title mdc-typography--headline2 medium">{{post.title}}</h3>
     </div>
     <a class="mdc-typography--headline5 light">{{parsedDates[i]}}</a>
   </div>

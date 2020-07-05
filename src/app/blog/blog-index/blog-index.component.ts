@@ -13,21 +13,26 @@ const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
 export class BlogIndexComponent implements OnInit {
   blogIndex: any;
   parsedDates: string[];
-  coverImagePaths: string[];
+  postStyles: any[];
 
   constructor(private http: HttpClient, private router: Router, private route:ActivatedRoute) {
     this.parsedDates = [];
-    this.coverImagePaths = [];
+    this.postStyles = [];
+
     this.getBlogIndex().subscribe(data => {
       this.blogIndex = data;
       this.blogIndex.posts.forEach(post => {
         let date = new Date(post.date)
         this.parsedDates.push(date.toLocaleDateString('en-IN', dateOptions))
-        if(post.cover_image) {
-          this.coverImagePaths.push('assets/images/blog/cover-images/'+post.cover_image)
-        } else {
-          this.coverImagePaths.push('')
+        let postStyle = {}
+        if (post.cover_image) {
+            postStyle['background-image'] = `url(assets/images/blog/cover-images/${post.cover_image}`
         }
+        if (post.cover_color) {
+          postStyle['background-color'] = post.cover_color
+          postStyle['box-shadow'] = `inset 0 0 0 0 rgba(0,0,0,0.6)`
+        }
+        this.postStyles.push(postStyle);
       });
     });
   }
@@ -36,7 +41,7 @@ export class BlogIndexComponent implements OnInit {
   }
 
   private getBlogIndex(): Observable<any> {
-    return this.http.get("./assets/content/index.json");
+    return this.http.get("./assets/content/blog-index.json");
   }
 
   gotoPost(postID:string) {

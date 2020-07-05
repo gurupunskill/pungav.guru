@@ -1,0 +1,27 @@
+{
+  "categories":["Work"],
+  "Work": [
+    [
+      {
+        "title":"SecureX",
+        "subtitle":"Frontend Developer",
+        "description_file":"securex",
+        "bgColor":"#da7959"
+      },
+      {
+        "title":"Fiverr",
+        "subtitle":"Freelance Developer",
+        "description_file":"fiverr",
+        "bgColor":"#5fa052"
+      }
+    ],
+    [
+      {
+        "title":"Microsoft",
+        "subtitle":"Software Engineer Intern",
+        "description_file":"microsoft",
+        "bgColor":"#317393"
+      }
+    ]
+  ]
+}

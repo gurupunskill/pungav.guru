@@ -18,6 +18,9 @@ const getClasses = (text:string) => {
         case "no-bottom-margin":
           parent_classes = parent_classes + " " + modifier;
           break;
+        case "no-margin":
+          parent_classes = parent_classes + " " + modifier;
+          break;
         case 'headline1':
           child_classes = child_classes + " mdc-typography--headline1";
           replace_child = true;
