@@ -1,5 +1,6 @@
 <!-- <h1 class="text-content--heading mdc-typography--headline1">Blog.</h1> -->
-<div *ngIf="blogIndex" class="full-width-content">
+<spinner *ngIf="!loaded"></spinner>
+<div *ngIf="blogIndex && loaded" class="full-width-content">
   <div class="post-listing" 
     *ngFor="let post of blogIndex.posts; let i = index" 
     (click)="gotoPost(post.file_name)" 

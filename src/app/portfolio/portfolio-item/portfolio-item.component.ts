@@ -9,7 +9,7 @@ export class PortfolioItemComponent implements OnInit {
 
   @Input() title: string;
   @Input() subtitle: string;
-  @Input() description_file: string;
+  @Input() description: string;
   @Input() fontColor?: string;
   @Input() bgColor?: string;
   @Input() bgImage?: string;
@@ -30,7 +30,7 @@ export class PortfolioItemComponent implements OnInit {
       this.style['color'] = this.fontColor;
     }
 
-    this.description_file = "assets/content/portfolio/"+this.description_file+".md";
+    // this.description_file = "assets/content/portfolio/"+this.description_file+".md";
   }
 
 }
