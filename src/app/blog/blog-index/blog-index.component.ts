@@ -17,12 +17,12 @@ export class BlogIndexComponent implements OnInit {
   postImages: string[];
   loaded: boolean;
   images: any[];
+  imgLoadedCounter: number;
 
   constructor(private http: HttpClient, private router: Router, private route:ActivatedRoute) {
     this.parsedDates = [];
     this.postStyles = [];
-    this.postImages = [];
-    this.images = [];
+    this.imgLoadedCounter = 0;
     this.loaded = false;
   }
 
@@ -30,6 +30,7 @@ export class BlogIndexComponent implements OnInit {
     this.loaded = false;
     this.getBlogIndex().subscribe(data => {
       this.blogIndex = data;
+      this.postImages = [];
       this.blogIndex.posts.forEach(post => {
         let date = new Date(post.date)
         this.parsedDates.push(date.toLocaleDateString('en-IN', dateOptions))
@@ -44,17 +45,9 @@ export class BlogIndexComponent implements OnInit {
         }
         this.postStyles.push(postStyle);
       });
-      this.pload(this.postImages)
     });
   }
   
-  pload(args: any[]):void {
-    for (var i = 0; i < args.length; i++) {
-      this.images.push(new Image());
-      this.images[i].src = args[i];
-    }
-    this.loaded = true;
-  }
 
   private getBlogIndex(): Observable<any> {
     return this.http.get("./assets/content/blog-index.json");
@@ -62,6 +55,12 @@ export class BlogIndexComponent implements OnInit {
 
   gotoPost(postID:string) {
     this.router.navigate(["/blog/post", postID]);
+  }
+
+  imgLoaded() {
+    this.imgLoadedCounter += 1;
+    this.loaded = (this.imgLoadedCounter >= this.postImages.length);
+    console.log(this.imgLoadedCounter);
   }
 
 }

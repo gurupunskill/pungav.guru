@@ -38,7 +38,6 @@ export class PortfolioComponent implements OnInit {
             this.getMdFile("./assets/content/portfolio/"+item.description_file+".md").subscribe(
               file_data => {
                 desc = file_data
-                console.log(desc)
                 c_desc.push(desc)
               }
             )

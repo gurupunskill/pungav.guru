@@ -10,8 +10,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { markedOptionsFactory } from './md-renderer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { SpinnerComponent } from './spinner/spinner.component';
 import { PortfolioItemComponent } from './portfolio/portfolio-item/portfolio-item.component';
+import { SpinnerModule } from './spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { PortfolioItemComponent } from './portfolio/portfolio-item/portfolio-ite
     PortfolioComponent,
     PortfolioItemComponent,
     PageNotFoundComponent,
-    SpinnerComponent,
     PortfolioItemComponent
   ],
   imports: [
@@ -35,7 +34,8 @@ import { PortfolioItemComponent } from './portfolio/portfolio-item/portfolio-ite
         useFactory: markedOptionsFactory,
       }
     }),
-    BlogModule
+    BlogModule,
+    SpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule),
   },
   {
+    path: 'spin',
+    component: SpinnerComponent,
+  },
+  {
     path: '',
     redirectTo: 'about',
     pathMatch: 'full'
