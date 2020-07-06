@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  images: any[];
+  loaded: boolean;
+
+  constructor() {
+    this.loaded = false;
+    this.images = [];
+  }
 
   ngOnInit(): void {
+    this.pload("assets/images/me.webp");
+  }
+
+  pload(...args: any[]):void {
+    for (var i = 0; i < args.length; i++) {
+      this.images.push(new Image());
+      this.images[i].src = args[i];
+    }
+    this.loaded = true;
   }
 
 }
