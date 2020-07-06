@@ -5,6 +5,7 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogIndexComponent } from './blog-index/blog-index.component';
+import { SpinnerModule } from '../spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { BlogIndexComponent } from './blog-index/blog-index.component';
   imports: [
     CommonModule,
     BlogRoutingModule,
+    SpinnerModule,
     MarkdownModule.forChild()
   ]
 })

@@ -1,6 +1,6 @@
 <!-- <h1 class="text-content--heading mdc-typography--headline1">Blog.</h1> -->
 <spinner *ngIf="!loaded"></spinner>
-<div *ngIf="blogIndex && loaded" class="full-width-content">
+<div *ngIf="loaded" class="full-width-content">
   <div class="post-listing" 
     *ngFor="let post of blogIndex.posts; let i = index" 
     (click)="gotoPost(post.file_name)" 
@@ -12,4 +12,7 @@
     </div>
     <a class="mdc-typography--headline5 light">{{parsedDates[i]}}</a>
   </div>
+</div>
+<div *ngIf="postImages">
+  <img *ngFor="let source of postImages" [src]="source" (load)="imgLoaded()" hidden>
 </div>

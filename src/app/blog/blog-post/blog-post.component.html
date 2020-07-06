@@ -1,3 +1,4 @@
-<div class="blog-content">
-  <markdown [src]="post_filepath"> </markdown>
+<spinner *ngIf="!loaded"></spinner>
+<div *ngIf="loaded" class="blog-content">
+  <markdown [data]="post_data"> </markdown>
 </div>

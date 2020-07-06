@@ -9,22 +9,19 @@ export class AboutComponent implements OnInit {
 
   images: any[];
   loaded: boolean;
+  imgLoadedCounter: number;
 
   constructor() {
     this.loaded = false;
-    this.images = [];
+    this.imgLoadedCounter = 0;
+    this.images = ["assets/images/me.webp"];
   }
 
-  ngOnInit(): void {
-    this.pload("assets/images/me.webp");
+  imgLoaded() {
+    this.imgLoadedCounter += 1;
+    this.loaded = (this.imgLoadedCounter >= this.images.length);
   }
 
-  pload(...args: any[]):void {
-    for (var i = 0; i < args.length; i++) {
-      this.images.push(new Image());
-      this.images[i].src = args[i];
-    }
-    this.loaded = true;
-  }
+  ngOnInit(): void {}
 
 }
