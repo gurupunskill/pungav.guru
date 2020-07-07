@@ -1,7 +1,7 @@
 @import "theme";
 
 .portfolio-item {
-  min-height: 50vh;
+  min-height: min(512px, 50vh, 100vw);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +9,7 @@
   color: white;
   transition: all 0.3s ease-in-out 0s;
   @include padding(48px);
+  
   // @include padding-right(24px);
 }
 
@@ -18,14 +19,14 @@
 }
 
 .portfolio-item:hover .portfolio-item--body {
-  max-height: rem(480px);
+  max-height: 40vh;
   opacity: 1;
 }
 
 .portfolio-item--body {
   opacity: 0;
   max-height: 0;
-  display: flex;
+  // display: flex;
   text-align: justify;
   transition: all 0.3s ease-in-out 0s;
   // margin-left: rem(48px);
