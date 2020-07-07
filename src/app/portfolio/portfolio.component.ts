@@ -30,21 +30,17 @@ export class PortfolioComponent implements OnInit {
       this.descriptions = {};
       this.categories.forEach((category: string | number) => {
         let categoryData = this.portfolio[category];
-        let r_desc =[]
-        categoryData.forEach((row: any[]) => {
-          let c_desc = []
-          row.forEach(item => {
-            let desc: any;
-            this.getMdFile("./assets/content/portfolio/"+item.description_file+".md").subscribe(
-              file_data => {
-                desc = file_data
-                c_desc.push(desc)
-              }
-            )
-          });
-          r_desc.push(c_desc);
+        let c_desc = []
+        categoryData.forEach((item) => {
+          let desc: any;
+          this.getMdFile("./assets/content/portfolio/"+item.description_file+".md").subscribe(
+            file_data => {
+              desc = file_data
+              c_desc.push(desc)
+            }
+          )
         });
-        this.descriptions[category] = r_desc;
+        this.descriptions[category] = c_desc;
       });
       this.loaded=true;
     })

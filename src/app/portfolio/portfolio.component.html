@@ -3,17 +3,15 @@
   <div *ngFor="let category of categories; let i = index">
     <h1 class="text-content--heading mdc-typography--headline1">{{category}}.</h1>
     <div class="standard-content">
-      <div *ngFor="let row of portfolio[category]; let j = index" class="portfolio-row">
-        <portfolio-item 
-          *ngFor="let item of row; let k = index"
-          [title]="item.title" 
-          [subtitle]="item.subtitle"
-          [description]="descriptions[category][j][k]"
-          [bgImage]="item.bgImage"
-          [bgColor]="item.bgColor"
-          [fontColor]="item.fontColor"
-          ></portfolio-item>
-      </div>
+      <portfolio-item 
+        *ngFor="let item of portfolio[category]; let j = index"
+        [title]="item.title" 
+        [subtitle]="item.subtitle"
+        [description]="descriptions[category][j]"
+        [bgImage]="item.bgImage"
+        [bgColor]="item.bgColor"
+        [fontColor]="item.fontColor"
+      ></portfolio-item>
     </div>
     <div class="large-spacer"></div>
   </div>
