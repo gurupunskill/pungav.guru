@@ -2,16 +2,18 @@
 <div *ngIf="loaded">
   <div *ngFor="let category of categories; let i = index">
     <h1 class="text-content--heading mdc-typography--headline1">{{category}}.</h1>
-    <div class="standard-content">
-      <portfolio-item 
-        *ngFor="let item of portfolio[category]; let j = index"
-        [title]="item.title" 
-        [subtitle]="item.subtitle"
-        [description]="descriptions[category][j]"
-        [bgImage]="item.bgImage"
-        [bgColor]="item.bgColor"
-        [fontColor]="item.fontColor"
-      ></portfolio-item>
+    <div class="portfolio-content">
+      <ng-container *ngFor="let item of portfolio[category]; let j = index">
+        <portfolio-item
+          [title]="item.title" 
+          [subtitle]="item.subtitle"
+          [description]="descriptions[category][j]"
+          [bgImage]="item.bgImage"
+          [bgColor]="item.bgColor"
+          [fontColor]="item.fontColor"
+        ></portfolio-item>
+        <div *ngIf="j%2==1" class="break"></div>
+      </ng-container>
     </div>
     <div class="large-spacer"></div>
   </div>

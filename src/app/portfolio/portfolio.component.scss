@@ -1,14 +1,22 @@
 @import "theme";
 
-// .portfolio-row {
-//   width: 100%;
-//   display: flex;
-//   // flex-direction: row;
-//   align-items: stretch;
-//   flex-wrap: wrap;
-// }
+.portfolio-content {
+  width: 95%;
+  display: flex;
+  height: fit-content;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
 
 portfolio-item {
   flex: 1;
+  display: block;
   margin: rem(4px);
 }
