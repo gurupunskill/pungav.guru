@@ -1,13 +1,74 @@
-@use "@material/typography" with (
-  $font-family: unquote("Inter, Roboto, Helvetica, Arial, sans-serif")
-);
+@use "@material/typography" ;
 @use "@material/typography/mdc-typography";
+@import '~rfs/scss';
 
 $mdc-typography-font-family: unquote("Inter, Roboto, Helvetica, Arial, sans-serif");
 
+html {
+  --mdc-typography-font-family: Inter, Roboto, Helvetica, Arial, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6, a, p, span {
   margin: 0;
+  transition: all 0.2s ease-in-out 0s;
 }
+
+div {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.mdc-typography--headline1 {
+  @include font-size(6rem);
+}
+
+.mdc-typography--headline2 {
+  @include font-size(3.75rem);
+}
+
+.mdc-typography--headline3 {
+  @include font-size(3rem);
+}
+
+.mdc-typography--headline4 {
+  @include font-size(2.125rem);
+}
+
+.mdc-typography--headline5 {
+  @include font-size(1.5rem);
+}
+
+.mdc-typography--headline6 {
+  @include font-size(1.25rem);
+}
+
+.mdc-typography--subtitle1 {
+  @include font-size(1rem);
+}
+
+.mdc-typography--subtitle2 {
+  @include font-size(0.875rem);
+}
+
+.mdc-typography--body1 {
+  @include font-size(1rem);
+}
+
+.mdc-typography--body2 {
+  @include font-size(0.875rem);
+}
+
+.mdc-typography--button {
+  @include font-size(0.875rem);
+}
+
+.mdc-typography--caption {
+  @include font-size(0.75rem);
+}
+
+.mdc-typography--overline {
+  @include font-size(0.75rem);
+}
+
 
 .light {
   font-weight: 300 !important;

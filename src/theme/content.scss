@@ -1,4 +1,5 @@
 @import 'functions';
+@import '~rfs/scss';
 
 // Content containers
 
@@ -9,24 +10,26 @@
 }
 
 .page--content {
-  margin-top: rem(72px);
+  @include margin-top(72px);
 }
 
 .page--footer {
-  // height: rem(128px);
-  padding: rem(64px);
+  @include padding(64px);
 }
 
 .text-content--heading {
-  margin: rem(32px) rem(64px) rem(16px) rem(64px);
-  // text-align: left;
-  // width: ;
+  @include margin-top(32px);
+  @include margin-right(64px);
+  @include margin-bottom(16px);
+  @include margin-left(64px);
 }
 
 .text-content--body {
-  margin: 0 rem(64px) rem(8px) rem(64px);
+  @include margin-top(0);
+  @include margin-right(64px);
+  @include margin-bottom(8px);
+  @include margin-left(64px);
   text-align: justify;
-  // font-weight: 300;
 }
 
 .blog-content {
@@ -35,7 +38,10 @@
 }
 
 .standard-content {
-  margin: 0 rem(64px) 0 rem(64px);
+  @include margin-top(0);
+  @include margin-right(64px);
+  @include margin-bottom(0);
+  @include margin-left(64px);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -53,8 +59,8 @@
 
 // Content overrides
 img {
-  max-width: 100%;
-  margin: rem(8px);
+  max-width: 95%;
+  @include margin(8px);
   transition: all 0.3s ease 0s;
 }
 
@@ -63,8 +69,12 @@ img:hover {
 }
 
 blockquote {
-  margin: 0 rem(64px) rem(8px) rem(64px);
-  padding: rem(16px);
+  @include margin-top(0);
+  @include margin-right(64px);
+  @include margin-bottom(8px);
+  @include margin-left(64px);
+  @include padding(16px);
+
   background-color: #f7f7f7;
   border-left: rem(4px) solid #444444;
 }
@@ -74,7 +84,10 @@ blockquote {
   }
 
   blockquote blockquote {
-    margin: rem(8px) 0 0 0;
+    @include margin-top(8px);
+    @include margin-right(0);
+    @include margin-bottom(0);
+    @include margin-left(0);
   }
 
 ul, ol {
@@ -129,15 +142,15 @@ a:-webkit-any-link {
 
 .small-spacer {
   width: 100%;
-  height: rem(16px);
+  @include padding-top(16px);
 }
 
 .medium-spacer {
   width: 100%;
-  height: rem(32px);
+  @include padding-top(32px);
 }
 
 .large-spacer {
   width: 100%;
-  height: rem(64px);
+  @include padding-top(64px);
 }

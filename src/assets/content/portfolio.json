@@ -1,37 +1,31 @@
 {
   "categories":["Work", "Education"],
   "Work": [
-    [
-      {
-        "title":"SecureX",
-        "subtitle":"Frontend Developer",
-        "description_file":"securex",
-        "bgColor":"#da7959"
-      },
-      {
-        "title":"Fiverr",
-        "subtitle":"Freelance Developer",
-        "description_file":"fiverr",
-        "bgColor":"#5fa052"
-      }
-    ],
-    [
-      {
-        "title":"Microsoft",
-        "subtitle":"Software Engineer Intern",
-        "description_file":"microsoft",
-        "bgColor":"#317393"
-      }
-    ]
+    {
+      "title":"SecureX",
+      "subtitle":"Frontend Developer",
+      "description_file":"securex",
+      "bgColor":"#da7959"
+    },
+    {
+      "title":"Fiverr",
+      "subtitle":"Freelance Developer",
+      "description_file":"fiverr",
+      "bgColor":"#5fa052"
+    },
+    {
+      "title":"Microsoft",
+      "subtitle":"Software Engineer Intern",
+      "description_file":"microsoft",
+      "bgColor":"#317393"
+    }
   ],
   "Education": [
-    [
-      {
-      "title":"National Institute of Technology Karnataka",
-      "subtitle":"B.Tech Computer Science",
+    {
+      "title":"Computer Science",
+      "subtitle":"National Institute of Technology Karnataka",
       "description_file":"nitk",
-      "bgColor":"#111111"
-      }
-    ]
+      "bgColor":"#333333"
+    }
   ]
 }
