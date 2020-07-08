@@ -19,54 +19,67 @@ div {
 
 .mdc-typography--headline1 {
   @include font-size(6rem);
+  line-height: 100%;
 }
 
 .mdc-typography--headline2 {
   @include font-size(3.75rem);
+  line-height: 100%;
 }
 
 .mdc-typography--headline3 {
   @include font-size(3rem);
+  line-height: 105%;
 }
 
 .mdc-typography--headline4 {
   @include font-size(2.125rem);
+  line-height: 118%;
 }
 
 .mdc-typography--headline5 {
   @include font-size(1.5rem);
+  line-height: 133%;
 }
 
 .mdc-typography--headline6 {
   @include font-size(1.25rem);
+  line-height: 160%;
 }
 
 .mdc-typography--subtitle1 {
   @include font-size(1rem);
+  line-height: 175%;
 }
 
 .mdc-typography--subtitle2 {
   @include font-size(0.875rem);
+  line-height: 200%;
 }
 
 .mdc-typography--body1 {
   @include font-size(1rem);
+  line-height: 150%;
 }
 
 .mdc-typography--body2 {
   @include font-size(0.875rem);
+  line-height: 143%;
 }
 
 .mdc-typography--button {
   @include font-size(0.875rem);
+  line-height: 257%;
 }
 
 .mdc-typography--caption {
   @include font-size(0.75rem);
+  line-height: 166%;
 }
 
 .mdc-typography--overline {
   @include font-size(0.75rem);
+  line-height: 266%;
 }
 
 
