@@ -9,7 +9,8 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+  filter: saturate(75%);
   color: white;
   // margin-bottom: rem(32px);
   // border-radius: rem(8px);
@@ -17,7 +18,14 @@
   transition: all 0.3s ease 0s;
 }
 
+.post-listing--title {
+  @include font-size(64px);
+  font-weight: 500;
+}
+
 .post-listing:hover {
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+  // box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+  // filter: grayscale(0%);
+  filter: saturate(100%);
   padding: rem(16px);
 }
