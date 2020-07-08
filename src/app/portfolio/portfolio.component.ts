@@ -13,6 +13,8 @@ export class PortfolioComponent implements OnInit {
   categories: any;
   descriptions: any;
   loaded: boolean;
+  images: string[];
+  imgLoadedCounter: number;
 
   private delay(ms: number): Promise<any> {
     return new Promise(resolve => setTimeout(()=>resolve(), ms));
@@ -20,10 +22,11 @@ export class PortfolioComponent implements OnInit {
 
   constructor(private http: HttpClient) {
     this.loaded = false;
+    this.images = [];
+    this.imgLoadedCounter = 0;
   }
 
   ngOnInit(): void {
-    this.loaded=false;
     this.getPortfolio().subscribe(data => {
       this.categories = data.categories;
       this.portfolio = data;
@@ -31,7 +34,9 @@ export class PortfolioComponent implements OnInit {
       this.categories.forEach((category: string | number) => {
         let categoryData = this.portfolio[category];
         categoryData.forEach((item) => {
-          let desc: any;
+          if(item.bgImage){
+            this.images.push(`assets/images/portfolio/${item.bgImage}`)
+          }
           this.getMdFile("./assets/content/portfolio/"+item.description_file+".md").subscribe(
             file_data => {
               this.descriptions[item.description_file] = file_data
@@ -39,7 +44,7 @@ export class PortfolioComponent implements OnInit {
           )
         });
       });
-      this.loaded=true;
+      // this.loaded=true;
     })
   }
 
@@ -49,6 +54,11 @@ export class PortfolioComponent implements OnInit {
 
   private getMdFile(filepath): Observable<any> {
     return this.http.get(filepath, {responseType: 'text'});
+  }
+
+  imgLoaded() {
+    this.imgLoadedCounter += 1;
+    this.loaded = (this.imgLoadedCounter >= this.images.length);
   }
 
 }

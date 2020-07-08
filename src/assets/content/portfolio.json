@@ -5,19 +5,22 @@
       "title":"SecureX",
       "subtitle":"Frontend Developer",
       "description_file":"securex",
-      "bgColor":"#da7959"
+      "bgColor":"rgba(218, 121, 89, 0.85)",
+      "bgImage":"securex.webp"
     },
     {
       "title":"Fiverr",
       "subtitle":"Freelance Developer",
       "description_file":"fiverr",
-      "bgColor":"#5fa052"
+      "bgColor":"rgba(95, 160, 82, 0.85)",
+      "bgImage":"fiverr.webp"
     },
     {
       "title":"Microsoft",
       "subtitle":"Software Engineer Intern",
       "description_file":"microsoft",
-      "bgColor":"#317393"
+      "bgColor":"rgba(49,115,147,0.85)",
+      "bgImage":"microsoft.webp"
     }
   ],
   "Education": [
@@ -25,7 +28,8 @@
       "title":"Computer Science",
       "subtitle":"National Institute of Technology Karnataka",
       "description_file":"nitk",
-      "bgColor":"#222"
+      "bgColor":"rgba(50,50,50,0.85)",
+      "bgImage":"nitk.webp"
     }
   ]
 }
