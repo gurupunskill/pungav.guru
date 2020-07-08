@@ -1,3 +1,9 @@
 @function rem($size) {
   @return $size / 16px * 1rem;
 }
+
+@mixin background-tint($tint_color, $image_url) {
+  background-image: 
+    linear-gradient( $tint_color, $tint_color ),
+    url( $image_url )
+}

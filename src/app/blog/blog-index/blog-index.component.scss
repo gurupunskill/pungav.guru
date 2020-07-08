@@ -17,6 +17,8 @@
   transition: all 0.3s ease 0s;
 
   @include padding-bottom(16px);
+  @include margin-bottom(8px);
+
   // @include padding-bottom(128px);
 }
 
@@ -36,6 +38,6 @@
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
   // filter: grayscale(0%);
   filter: saturate(100%);
-  @include padding(32px);
+  @include padding(24px);
   
 }
