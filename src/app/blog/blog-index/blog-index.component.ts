@@ -60,7 +60,6 @@ export class BlogIndexComponent implements OnInit {
   imgLoaded() {
     this.imgLoadedCounter += 1;
     this.loaded = (this.imgLoadedCounter >= this.postImages.length);
-    console.log(this.imgLoadedCounter);
   }
 
 }
