@@ -18,5 +18,10 @@
 portfolio-item {
   flex: 1;
   display: block;
-  margin: rem(4px);
+  min-width: min(100%, 300px);
+  @include margin-bottom(8px);
+  @include margin-right(4px);
+  @include margin-left(4px);
+  @include margin-top(0px);
+
 }

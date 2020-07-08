@@ -21,10 +21,12 @@ export class PortfolioItemComponent implements OnInit {
   ngOnInit(): void {
     this.style = {};
     if(this.bgColor) {
-      this.style['background-color'] = this.bgColor;
+      // box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4)
+      // this.style['background-color'] = this.bgColor;
+      this.style['box-shadow'] = `inset 0 0 0 1000px ${this.bgColor}`;
     }
     if(this.bgImage) {
-      this.style['background-image'] = this.bgImage;
+      this.style['background-image'] = `url(assets/images/portfolio/${this.bgImage}`
     }
     if(this.fontColor) {
       this.style['color'] = this.fontColor;
