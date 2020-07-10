@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "pungav-guru",
-      "public": "dist/pungav-guru",
+      "public": "dist\\pungav-guru\\dist\\pungav-guru\\browser",
       "ignore": [
         "**/.*"
       ],
@@ -20,9 +20,12 @@
       "rewrites": [
         {
           "source": "**",
-          "destination": "/index.html"
+          "function": "ssr"
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "source": "dist/pungav-guru"
+  }
 }

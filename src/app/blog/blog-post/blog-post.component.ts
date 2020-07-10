@@ -16,7 +16,7 @@ export class BlogPostComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {
     this.postID = this.route.snapshot.paramMap.get("postID")
-    this.post_filepath = "assets/content/blog/" + this.postID + ".md";
+    this.post_filepath = "./assets/content/blog/" + this.postID + ".md";
     this.loaded = false;
   }
 

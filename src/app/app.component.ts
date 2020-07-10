@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, RouterEvent, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pungav-guru';
+  title = 'Gurupungav Narayanan';
+
+  loaded: boolean = false;
+
+  constructor(private router: Router) {
+    router.events.subscribe((routerEvent: RouterEvent) => {
+      this.checkRouterEvent(routerEvent);
+    });
+  }
+
+  checkRouterEvent(routerEvent: RouterEvent): void {
+    if (routerEvent instanceof NavigationStart) {
+      this.loaded = false;
+    }
+
+    if (routerEvent instanceof NavigationEnd ||
+      routerEvent instanceof NavigationCancel ||
+      routerEvent instanceof NavigationError) {
+      this.loaded = true;
+    }
+  }
 }
