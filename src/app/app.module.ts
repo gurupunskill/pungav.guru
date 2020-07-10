@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PortfolioItemComponent } from './portfolio/portfolio-item/portfolio-item.component';
 import { SpinnerModule } from './spinner/spinner.module';
+import { httpInterceptorProviders } from './http-interceptors';
+import { environment } from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { SpinnerModule } from './spinner/spinner.module';
     PortfolioItemComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
@@ -37,7 +39,10 @@ import { SpinnerModule } from './spinner/spinner.module';
     BlogModule,
     SpinnerModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders,
+    { provide: "BASE_URL", useValue: environment.baseUrl }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
