@@ -7,20 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  images: any[];
-  loaded: boolean;
-  imgLoadedCounter: number;
+  constructor() {}
 
-  constructor() {
-    this.loaded = false;
-    this.imgLoadedCounter = 0;
-    this.images = ["assets/images/me.webp"];
-  }
-
-  imgLoaded() {
-    this.imgLoadedCounter += 1;
-    this.loaded = (this.imgLoadedCounter >= this.images.length);
-  }
+  imgLoaded() {}
 
   ngOnInit(): void {}
 

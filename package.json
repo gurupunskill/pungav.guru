@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run pungav-guru:serve-ssr",
+    "serve:ssr": "node dist/pungav-guru/server/main.js",
+    "build:ssr": "ng build --prod && ng run pungav-guru:server:production",
+    "prerender": "ng run pungav-guru:prerender"
   },
   "private": true,
   "dependencies": {
@@ -19,8 +23,11 @@
     "@angular/forms": "~10.0.2",
     "@angular/platform-browser": "~10.0.2",
     "@angular/platform-browser-dynamic": "~10.0.2",
+    "@angular/platform-server": "~10.0.2",
     "@angular/router": "~10.0.2",
     "@material/typography": "^7.0.0",
+    "@nguniversal/express-engine": "^10.0.1",
+    "express": "^4.15.2",
     "firebase": "^7.13.1",
     "fontsource-inter": "^2.1.4",
     "ngx-markdown": "^10.0.0",
@@ -33,6 +40,8 @@
     "@angular-devkit/build-angular": "~0.1000.1",
     "@angular/cli": "~10.0.1",
     "@angular/compiler-cli": "~10.0.2",
+    "@nguniversal/builders": "^10.0.1",
+    "@types/express": "^4.17.0",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
@@ -53,6 +62,9 @@
     "fuzzy": "^0.1.3",
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
-    "open": "^7.0.3"
+    "open": "^7.0.3",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.0",
+    "firebase-functions-test": "^0.2.0"
   }
 }
