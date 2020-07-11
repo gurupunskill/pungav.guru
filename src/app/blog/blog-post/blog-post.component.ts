@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { error } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-blog-post',
@@ -14,7 +15,7 @@ export class BlogPostComponent implements OnInit {
   post_data: string;
   loaded: boolean;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {
+  constructor(private route: ActivatedRoute, private router:Router, private http: HttpClient) {
     this.postID = this.route.snapshot.paramMap.get("postID")
     this.post_filepath = "./assets/content/blog/" + this.postID + ".md";
     this.loaded = false;
@@ -25,6 +26,9 @@ export class BlogPostComponent implements OnInit {
       file_data => {
         this.post_data = file_data;
         this.loaded = true;
+      },
+      error => {
+        this.router.navigate(["404"]);
       }
     )
   }

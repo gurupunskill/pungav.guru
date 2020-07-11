@@ -32,9 +32,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '**',
+    path: '404',
     component: PageNotFoundComponent,
     data: { title: 'Page Not Found' }
+  },
+  {
+    path: '**',
+    redirectTo: '404'
   }
 ];
 
