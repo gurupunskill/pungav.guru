@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { error } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-blog-post',
@@ -22,15 +21,36 @@ export class BlogPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getMdFile(this.post_filepath).subscribe(
-      file_data => {
-        this.post_data = file_data;
-        this.loaded = true;
+    this.checkIfPostExists().then(
+      (val) => {
+        this.getMdFile(this.post_filepath).subscribe(
+          file_data => {
+            this.post_data = file_data;
+            this.loaded = true;
+          }
+        )
       },
-      error => {
-        this.router.navigate(["404"]);
+      (err) => {
+        this.router.navigate(['404']);
       }
     )
+  }
+
+  private checkIfPostExists(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.getBlogIndex().subscribe(data => {
+        data.posts.forEach(post => {
+          if(this.postID == post.file_name) {
+            resolve(true);
+          }
+        });
+        reject(false);
+      });
+    })
+  }
+
+  private getBlogIndex(): Observable<any> {
+    return this.http.get("./assets/content/blog-index.json");
   }
 
   private getMdFile(filepath): Observable<any> {
