@@ -100,7 +100,7 @@ table {
   margin: rem(16px) auto rem(16px) auto;
 }
 
-a:-webkit-any-link {
+a {
   display: inline-block;
   position: relative;
   color: rgb(0, 0, 206);
@@ -108,7 +108,7 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-  a:-webkit-any-link::before {
+  a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -122,12 +122,12 @@ a:-webkit-any-link {
 
   }
 
-  a:-webkit-any-link:hover::before {
+  a:hover::before {
     visibility: visible;
     transform: scaleX(1);
   }
 
-  a:-webkit-any-link:hover {
+  a:hover {
     color: rgb(0, 0, 206);
   }
 
