@@ -57,7 +57,7 @@ const getClasses = (text:string) => {
           child_classes = child_classes + " mdc-typography--body1";
           replace_child = true;
           break;
-        case 'body1':
+        case 'body2':
           child_classes = child_classes + " mdc-typography--body2";
           replace_child = true;
           break;
