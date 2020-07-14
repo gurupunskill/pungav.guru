@@ -34,5 +34,4 @@ export class PortfolioItemComponent implements OnInit {
 
     // this.description_file = "assets/content/portfolio/"+this.description_file+".md";
   }
-
 }

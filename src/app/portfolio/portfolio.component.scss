@@ -1,13 +1,25 @@
 @import "theme";
 
 .portfolio-content {
-  width: 95%;
+  // width: 95%;
+  // @include margin-left(8px);
+  // @include margin-right(8px);
   display: flex;
   height: fit-content;
   text-align: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: auto;
+  @include margin-left(4px);
+  @include margin-right(4px);
+
+  // margin: auto;
+}
+
+.portfolio-header {
+  @include margin-left(16px);
+  @include margin-bottom(8px);
+  // font-weight: 500;
+  // @include margin-right(16px);
 }
 
 .break {
@@ -19,9 +31,5 @@ portfolio-item {
   flex: 1;
   display: block;
   min-width: min(100%, 300px);
-  @include margin-bottom(8px);
-  @include margin-right(4px);
-  @include margin-left(4px);
-  @include margin-top(0px);
-
+  @include margin(4px);
 }

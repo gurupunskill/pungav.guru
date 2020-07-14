@@ -1,5 +1,5 @@
 <div *ngFor="let category of categories; let i = index">
-  <h1 class="text-content--heading mdc-typography--headline1">{{category}}.</h1>
+  <h1 class="portfolio-header mdc-typography--headline1">{{category}}.</h1>
   <div class="portfolio-content">
     <ng-container *ngFor="let item of portfolio[category]; let j = index">
       <portfolio-item
