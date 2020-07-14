@@ -5,14 +5,16 @@
       "date": "24 July 2018",
       "description": "Convolutional neural networks aren't just for images. NASA used it to discover a whole new planet.",
       "file_name": "space-ml",
-      "cover_image": "space-ml.webp"
+      "bgImage": "space-ml.webp",
+      "bgColor": "rgba(49,59,76,0.85)"
     },
     {
       "title": "Typography using the custom markdown renderer",
       "description": "A sample post testing the markdown renderer used in my website.",
       "date": "1 July 2020",
       "file_name": "typography",
-      "cover_image": "typography.webp"
+      "bgImage": "typography-1.webp",
+      "bgColor": "rgba(249,166,2,0.85)"
     }
   ]
 }

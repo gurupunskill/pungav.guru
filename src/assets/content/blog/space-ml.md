@@ -1,4 +1,4 @@
-#### How NASA discovered planets using AI
+#### How NASA discovered planets using Artificial Intelligence
 
 A Convolutional Neural Network.  
 A Convolutional Neural Network and 90 minutes of training.  
