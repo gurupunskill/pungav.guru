@@ -35,13 +35,15 @@ export class BlogIndexComponent implements OnInit {
         let date = new Date(post.date)
         this.parsedDates.push(date.toLocaleDateString('en-IN', dateOptions))
         let postStyle = {}
-        if (post.cover_image) {
-            postStyle['background-image'] = `url(assets/images/blog/cover-images/${post.cover_image}`
-            this.postImages.push(`assets/images/blog/cover-images/${post.cover_image}`)
+        if(post.bgImage) {
+            postStyle['background-image'] = `url(assets/images/blog/cover-images/${post.bgImage}`
+            this.postImages.push(`assets/images/blog/cover-images/${post.bgImage}`)
         }
-        if (post.cover_color) {
-          postStyle['background-color'] = post.cover_color
-          postStyle['box-shadow'] = `inset 0 0 0 0 rgba(0,0,0,0.6)`
+        if(post.bgColor) {
+          postStyle['box-shadow'] = `inset 0 0 0 1000px ${post.bgColor}`;
+        }
+        if(post.color) {
+          postStyle['color'] = `${post.color}`;
         }
         this.postStyles.push(postStyle);
       });
