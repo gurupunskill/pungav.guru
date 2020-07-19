@@ -69,8 +69,10 @@ const getClasses = (text:string) => {
           break;
         case 'medium':
           child_classes = child_classes + " medium";
+          break;
         case 'bold':
           child_classes = child_classes + " bold";
+          break;
         default:
           break;
       }
