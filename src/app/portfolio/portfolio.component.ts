@@ -12,10 +12,6 @@ export class PortfolioComponent implements OnInit {
   categories: any;
   descriptions: any;
 
-  private delay(ms: number): Promise<any> {
-    return new Promise(resolve => setTimeout(()=>resolve(), ms));
-  }
-
   constructor(private route: ActivatedRoute) {
   }
 
