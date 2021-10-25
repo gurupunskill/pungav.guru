@@ -1,0 +1,159 @@
+@import 'functions';
+@import '~rfs/scss';
+
+// Content containers
+
+.page {
+  width: 100%;
+  max-width: rem(1280px);
+  margin: auto;
+}
+
+.page--content {
+  @include margin-top(72px);
+}
+
+.page--footer {
+  @include padding(64px);
+}
+
+.text-content--heading {
+  @include margin-top(32px);
+  @include margin-right(64px);
+  @include margin-bottom(16px);
+  @include margin-left(64px);
+}
+
+.text-content--body {
+  @include margin-top(0);
+  @include margin-right(64px);
+  @include margin-bottom(16px);
+  @include margin-left(64px);
+  text-align: justify;
+}
+
+.blog-content {
+  max-width: rem(1280px);
+  margin: auto;
+}
+
+.standard-content {
+  @include margin-top(0);
+  @include margin-right(64px);
+  @include margin-bottom(0);
+  @include margin-left(64px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-width-content {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Content overrides
+img {
+  display: block;
+  max-width: 95%;
+  // @include margin(8px);
+  transition: all 0.3s ease 0s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img:hover {
+  transform: scale(1.025);
+}
+
+blockquote {
+  @include margin-top(0);
+  @include margin-right(64px);
+  @include margin-bottom(8px);
+  @include margin-left(64px);
+  @include padding(16px);
+
+  background-color: #ededeb;
+  border-left: rem(4px) solid #444444;
+}
+  blockquote .text-content--body {
+    margin: 0;
+    color: #444444;
+  }
+
+  blockquote blockquote {
+    @include margin-top(8px);
+    @include margin-right(0);
+    @include margin-bottom(0);
+    @include margin-left(0);
+  }
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+table {
+  font-family: $mdc-typography-font-family;
+  margin: rem(16px) auto rem(16px) auto;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  color: rgb(0, 0, 206);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 206);;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out 0s;
+
+  }
+
+  a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  a:hover {
+    color: rgb(0, 0, 206);
+  }
+
+// Spacing
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+.no-margin {
+  margin: 0 0 0 0 !important;
+}
+
+.small-spacer {
+  width: 100%;
+  @include padding-bottom(16px);
+}
+
+.medium-spacer {
+  width: 100%;
+  @include padding-bottom(32px);
+}
+
+.large-spacer {
+  width: 100%;
+  @include padding-bottom(64px);
+}

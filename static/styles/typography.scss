@@ -1,0 +1,104 @@
+@use "@material/typography" ;
+@use "@material/typography/mdc-typography";
+@import '~fontsource-inter/latin-ext-300.css';
+@import '~fontsource-inter/latin-ext-400.css';
+@import '~fontsource-inter/latin-ext-500.css';
+@import '~fontsource-inter/latin-ext-700.css';
+@import '~rfs/scss';
+
+$mdc-typography-font-family: unquote("Inter, Roboto, Helvetica, Arial, sans-serif");
+
+html {
+  --mdc-typography-font-family: Inter, Roboto, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, span {
+  margin: 0;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+div {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.mdc-typography--headline1 {
+  @include font-size(6rem);
+  line-height: 100%;
+}
+
+.mdc-typography--headline2 {
+  @include font-size(3.75rem);
+  line-height: 100%;
+}
+
+.mdc-typography--headline3 {
+  @include font-size(3rem);
+  line-height: 105%;
+}
+
+.mdc-typography--headline4 {
+  @include font-size(2.125rem);
+  line-height: 118%;
+}
+
+.mdc-typography--headline5 {
+  @include font-size(1.5rem);
+  line-height: 133%;
+}
+
+.mdc-typography--headline6 {
+  @include font-size(1.25rem);
+  line-height: 160%;
+}
+
+.mdc-typography--subtitle1 {
+  @include font-size(1rem);
+  line-height: 175%;
+}
+
+.mdc-typography--subtitle2 {
+  @include font-size(0.875rem);
+  line-height: 200%;
+}
+
+.mdc-typography--body1 {
+  @include font-size(1rem);
+  line-height: 150%;
+}
+
+.mdc-typography--body2 {
+  @include font-size(0.875rem);
+  line-height: 143%;
+}
+
+.mdc-typography--button {
+  @include font-size(0.875rem);
+  line-height: 257%;
+}
+
+.mdc-typography--caption {
+  @include font-size(0.75rem);
+  line-height: 166%;
+}
+
+.mdc-typography--overline {
+  @include font-size(0.75rem);
+  line-height: 266%;
+}
+
+
+.light {
+  font-weight: 300 !important;
+}
+
+.regular {
+  font-weight: 400 !important;
+}
+
+.medium {
+  font-weight: 500 !important;
+}
+
+.bold {
+  font-weight: 700 !important;
+}

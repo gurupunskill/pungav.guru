@@ -1,0 +1,42 @@
+### Local development
+# backend:
+#   name: git-gateway
+# local_backend: true
+
+### Prod development
+backend:
+  name: github
+  repo: gurupunskill/pungav.guru
+  branch: main
+
+media_folder: static/assets
+public_folder: /assets
+collections:
+  - name: blog
+    label: Blog
+    folder: static/content/blog
+    media_folder: static/assets/blog/{{slug}}
+    create: true
+    fields:
+      - { name: slug, label: Slug }
+      - { name: type, label: Type }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: coverImage, label: Cover Image, widget: image}
+      - { name: coverColor, label: Cover Color}
+      - { name: body, label: Body, widget: markdown }
+  - name: work
+    label: Work
+    folder: static/content/work
+    media_folder: static/assets/work
+    create: true
+    fields:
+      - { name: slug, label: Slug }
+      - { name: type, label: Type }
+      - { name: title, label: Title }
+      - { name: subtitle, label: Subtitle }
+      - { name: timelineStart, label: Timeline Start, widget: datetime }
+      - { name: timelineEnd, label: Timeline End, widget: datetime }
+      - { name: coverImage, label: Cover Image, widget: image}
+      - { name: coverColor, label: Cover Color}
+      - { name: body, label: Body, widget: markdown }

@@ -1,0 +1,19 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "airbnb/hooks"
+    ],
+    "rules": {
+      "no-anonymous-exports-page-templates": "warn",
+      "limited-exports-page-templates": "warn",
+      "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": ["error"],
+      "react/prop-types": "warn",
+      "no-unused-vars": "off",
+      "import/no-unresolved": "off",
+      "import/extensions": "off"
+    }
+}

@@ -1,0 +1,41 @@
+@import "theme";
+
+.blog-header {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  @include margin-left(32px);
+  @include margin-bottom(16px);
+}
+
+.post-listing {
+  display: flex;
+  width: calc(100% - 32px);
+  min-height: min(75vh, 75vw);
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  background-size: cover;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+  @include padding-bottom(16px);
+  @include margin-bottom(8px);
+}
+
+.post-listing--title {
+  @include font-size(64px);
+  @include margin-top(128px);
+  font-weight: 500 !important;
+}
+
+.post-listing--description {
+  @include margin-top(16px);
+  // @include padding-bottom(128px);
+  // width: 75%;
+}
+
+.post-listing:hover {
+  @include padding(16px);
+}
