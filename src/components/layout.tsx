@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import '../../static/styles/layout.scss';
 
 export default function Layout({ children }) {
+  const onTitleClick = () => { navigate('/'); };
   return (
     <div className="page">
       <header className="navigation-bar">
         <div className="navigation-bar--content">
           <div className="app-title">
-            <span id="title-name">Gurupungav N.</span>
+            <span id="title-name" onClick={onTitleClick} onKeyDown={onTitleClick} aria-hidden="true">Gurupungav N.</span>
           </div>
           <nav className="navigation-bar--links">
             <Link className="navigation-bar--link" activeClassName="navigation-bar--link--selected" to="/">About</Link>

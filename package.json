@@ -13,8 +13,9 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "cms-local": "npx netlify-cms-proxy-server",
-    "lint": "npx eslint src"
+    "cms": "npx netlify-cms-proxy-server",
+    "lint": "npx eslint src",
+    "webp": "pwsh.exe ./convert-to-webp.ps1"
   },
   "dependencies": {
     "@material/typography": "^13.0.0",
@@ -28,6 +29,7 @@
     "gatsby-plugin-manifest": "^4.0.0",
     "gatsby-plugin-mdx": "^3.0.0",
     "gatsby-plugin-netlify-cms": "^6.0.0",
+    "gatsby-plugin-nprogress": "^4.0.0",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-sass": "^5.0.0",
     "gatsby-plugin-sharp": "^4.0.0",

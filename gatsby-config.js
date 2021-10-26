@@ -13,7 +13,7 @@ const gatsbyRequiredRules = path.join(
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://pungav.guru",
     title: "pungav.guru",
   },
   plugins: [
@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "./static/assets/favicon.png",
+        icon: "./static/assets/favicon.webp",
       },
     },
     "gatsby-plugin-mdx",
@@ -92,6 +92,12 @@ module.exports = {
       options: {
         component: require.resolve(`./src/components/layout.tsx`),
       },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: 'black'
+      }
     },
   ]
 };
